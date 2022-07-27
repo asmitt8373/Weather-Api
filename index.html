@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Api</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+<body>
+    <!--creates the header-->
+    <header class="header mb-3">Weather Dashboard</header>
+    <!--styles the whole container-->
+    <div id="sidenav-3" data-mdb-close-on-esc="false" class="sidenav" data-mdb-hidden="false"
+        data-mdb-position="absolute" data-mdb-focus-trap="false" data-mdb-scroll-container="#scroll-container"
+        role="navigation">
+        <!-- creates a row and column for the search engine and the other information inside of it-->
+        <div class="row">
+            <div class="col-md-2">
+                <div class="col-md-12">
+                    <ul id="scroll-container" class="sidenav-menu">
+                        <div class="input-group rounded my-2">
+                            <div class="form-outline">
+                                <h2 class="py-4">Search for a City</h2>
+                                <input type="search" id="form1" class="form-control" />
+                                <button id="searchCity" class="search">Search</button>
+                                <hr class="m-0" />
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ms-5">
+                        <ul class="list-group" id="listGroup">
+                            <!--local storage and javascript create these elements-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--inputs for the card-->
+            <div class="col-md-10">
+                <div class="container">
+                    <div class="row">
+                        <div class="card col-md-12 mb-5" id="weatherCard">
+                            <h1 id="currentDay"></h1>
+                            <p id="currentIcon"></p>
+                            <span class="location">Location: </span>
+                            <span class="tempature">Tempature: </span>
+                            <span class="windSpeed">Wind Speed: </span>
+                            <span class="humidity">Humidity: </span>
+                            <p id="uvIndex0"></p>
+                            
+                        </div>
+                        <!--5 day forecast-->
+                        <div class="row" id="forcastRow">
+                            <div class="col-md-12">
+                                <span class="fiveDayForcast">5 Day Forecast</span>
+                            </div>
+                        </div>
+                        <div class="row" id="forcastRow">
+                            <div class="card col-md-2" id="forecastCard">
+                                <div id="forcastDate1">
+                                    <h2 id="currentDay1">date</h2>
+                                </div>
+                                <p id="forecastIcon1"></p>
+                                <span class="forecastTemperature1">Temp: </span>
+                                <span class="forecastwind1">Wind:</span>
+                                <span class="forecastHumidity1">Humidity: </span>
+                            </div>
+
+                            <div class="card col-md-2" id="forecastCard">
+                                <div id="forcastDate2">
+                                    <h2 id="currentDay2">date</h2>
+                                </div>
+                                <p id="forecastIcon2"></p>
+                                <span class="forecastTemperature2">Temp: </span>
+                                <span class="forecastwind2">Wind:</span>
+                                <span class="forecastHumidity2">Humidity: </span>
+                            </div>
+                            <div class="card col-md-2" id="forecastCard">
+                                <div id="forcastDate3">
+                                    <h2 id="currentDay3">date</h2>
+                                </div>
+                                <p id="forecastIcon3"></p>
+                                <span class="forecastTemperature3">Temp: </span>
+                                <span class="forecastwind3">Wind:</span>
+                                <span class="forecastHumidity3">Humidity: </span>
+                            </div>
+
+                            <div class="card col-md-2" id="forecastCard">
+                                <div id="forcastDate4">
+                                    <h2 id="currentDay4">date</h2>
+                                </div>
+                                <p id="forecastIcon4"></p>
+                                <span class="forecastTemperature4">Temp: </span>
+                                <span class="forecastwind4">Wind:</span>
+                                <span class="forecastHumidity4">Humidity: </span>
+                            </div>
+
+                            <div class="card col-md-2" id="forecastCard">
+                                <div id="forcastDate5">
+                                    <h2 id="currentDay5">date</h2>
+                                </div>
+                                <p id="forecastIcon5"></p>
+                                <span class="forecastTemperature5">Temp: </span>
+                                <span class="forecastwind5">Wind:</span>
+                                <span class="forecastHumidity5">Humidity: </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+<script src="script.js">
+</script>
+</head>

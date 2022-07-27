@@ -45,7 +45,7 @@ function cityLimit() {
         cities.pop();
     }
 }
-
+// gives the search button a click command
 searchButton.addEventListener("click", geoSearch)
 function geoSearch() {
     addNewCity()
@@ -72,6 +72,7 @@ function geoSearch() {
             $(".tempature").text("Tempature: " + data.daily[0].temp.day + "° F");
             $(".windSpeed").text("Wind-Speed: " + data.daily[0].wind_speed)
             $(".humidity").text("Humidity: " + data.daily[0].humidity)
+            // styles the uv index so that it has color and the if/else helps define which one its gonna be 
             $("#uvIndex0").append($(`<p>UV Index: <span id="uv">${data.daily[0].uvi}</span></p>`));
             if (data.daily[0].uvi <= 3) {
                 $("#uv").css({
@@ -93,6 +94,7 @@ function geoSearch() {
                     "background-color": "red"
                 });
             }
+            //styles the cloud that appears on each card
             $("#currentIcon").prepend($("<img>").attr("src", "http://openweathermap.org/img/wn/" + data.daily[0].weather[0].icon + ".png"))
             //data for tomorrows weather
             $(".forecastTemperature1").text("Temp: " + data.daily[1].temp.day + "° F");

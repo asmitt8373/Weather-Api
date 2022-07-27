@@ -1,0 +1,17 @@
+
+.header {
+    padding: 30px;
+      text-align: center;
+      color: white;
+      font-size: 30px;
+      background-image: linear-gradient(to right, blue , purple);
+}
+.search {
+    padding:5px 100px 5px 100px;
+    background-color:rgb(0, 140, 255);
+    color: white;
+}
+#weatherCard {
+    line-height: 2;
+    font-size: larger;
+}
